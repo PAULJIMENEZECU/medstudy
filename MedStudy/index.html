@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Wenesi</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+}
+
+/* botón MedStudy */
+
+.topbar{
+position:fixed;
+top:20px;
+right:20px;
+z-index:10;
+}
+
+.topbar button{
+background:#d90429;
+color:white;
+border:none;
+padding:12px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.topbar button:hover{
+background:#ef233c;
+}
+
+/* menú lateral */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+height:100%;
+width:250px;
+background:#111;
+padding:20px;
+display:none;
+overflow-y:auto;
+}
+
+.sidebar h2{
+border-bottom:1px solid #333;
+padding-bottom:10px;
+}
+
+.topic{
+margin-top:20px;
+font-weight:bold;
+color:#ff4d4d;
+}
+
+/* botones temas */
+
+button.link{
+display:block;
+width:100%;
+margin-top:8px;
+padding:10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:14px;
+text-align:left;
+}
+
+/* colores distintos */
+
+.btn1{background:#1f1f1f;color:white;}
+.btn2{background:#2b2b2b;color:white;}
+.btn3{background:#3a3a3a;color:white;}
+
+button.link:hover{
+background:#d90429;
+}
+
+/* contenido */
+
+.content{
+margin-left:0;
+padding:80px 40px;
+text-align:center;
+}
+
+.title{
+font-size:40px;
+margin-bottom:20px;
+}
+
+/* botón volver */
+
+.back{
+margin-top:20px;
+background:#444;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.back:hover{
+background:#d90429;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<button onclick="abrirMedstudy()">MedStudy</button>
+</div>
+
+<div class="sidebar" id="sidebar">
+
+<h2>MedStudy</h2>
+
+<div class="topic">Bases Biológicas</div>
+
+<div class="topic">Antropología</div>
+
+<button class="link btn1"
+onclick="location.href='https://wenesi.com/bases_biologicas/antropologia/ley_ejercicio_medicina_semana_uno/'">
+Ley de ejercicio de la medicina
+¿A que se considera ejercicio de la Med? Art.2-3-4-13
+</button>
+
+<div class="topic">Bioquímica y Análisis Clínicos</div>
+
+<button class="link btn2"
+onclick="location.href='https://wenesi.com/bases_biologicas/bioquimica-analisis_clinicos/sangre/'">
+Sangre 1 - Introducción
+</button>
+
+<div class="topic">Introducción a la Educación Médica</div>
+
+<button class="link btn3">
+IEM - empty
+</button>
+
+</div>
+
+<div class="content" id="content">
+
+<div class="title">WeNesi</div>
+
+<p>By Sebastian Jimenez</p>
+
+</div>
+
+<script>
+
+function abrirMedstudy(){
+
+document.getElementById("sidebar").style.display="block"
+document.getElementById("content").style.marginLeft="260px"
+
+}
+
+</script>
+
+</body>
+</html>
